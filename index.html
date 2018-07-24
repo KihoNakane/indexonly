@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>TOP _ KIHO'S ROOM</title>
+<link rel="stylesheet" type="text/css" href="css/conf0.css" />
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<style>
+
+.container{ height: 86%; position: absolute;} 												/*しるし */
+
+.sl-slider-wrapper { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+
+/* Content elements */
+.deco { width: 260px; height: 260px; 
+		border: 2px dashed #ddd; 
+		border: 2px dashed rgba(150, 150, 150, 0.4);
+		border-radius: 50%; 
+		position: absolute;
+		bottom: 50%; left: 50%; 
+		margin: 0 0 0 -130px; }
+[data-icon]:after { content: attr(data-icon); 
+		color: #999; 
+		text-shadow: 0 0 1px #999; 
+		position: absolute;
+		width: 220px; height: 220px; 
+		line-height: 240px; 
+		text-align: center; 
+		font-size: 45px; 
+		top: 50%; left: 50%; 
+		margin: -110px 0 0 -110px; 
+		box-shadow: inset 0 0 0 10px #f7f7f7; 
+		border-radius: 50%; }
+.sl-slide h2 { color: #000; 
+		padding: 20px; 
+		position: absolute; 
+		font-size: 34px; 
+		font-weight: 700; 
+		text-transform: uppercase;
+		width: 80%; left: 10%; 
+		text-align: center; 
+		line-height: 50px; 
+		bottom: 50%; 
+		margin: 0 0 -120px 0; }
+.sl-slide blockquote { position: absolute; 
+		width: 100%;
+		text-align: center; 
+		left: 0; 
+		font-weight: 400; 
+		font-size: 14px; 
+		line-height: 20px; 
+		height: 70px; 
+		color: #8b8b8b; 
+		z-index: 2; 
+		bottom: 50%; 
+		margin: 0 0 -200px 0; 
+		padding: 0; }
+.sl-slide blockquote p { margin: 0 auto; 
+		width: 60%; 
+		max-width: 400px; 
+		position: relative; }
+.sl-slide blockquote p:before { color: #f0f0f0;
+		color: rgba(244, 244, 244, 0.65); 
+		position: absolute; 
+		line-height: 60px; 
+		width: 75px; height: 75px; 
+		font-size: 0px; 
+		z-index: -1; 
+		left: -80px; top: 35px; 
+		content: '\201C'; }
+.sl-slide blockquote cite { font-size: 10px; 
+							padding-top: 10px; 
+							display: inline-block; 
+							font-style: normal; 
+							text-transform: uppercase; 
+							letter-spacing: 4px; }
+
+/* Custom background colors for slides in first demo */
+/* First Slide */
+.bg-1 .sl-slide-inner, .bg-1 .sl-content-slice { background:#3D21BE url("images/butterfly.jpg") top center repeat;
+	background-size:cover; }
+.bg-1 .deco { border-color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+.bg-1 [data-icon]:after { color: #fff; text-shadow: 0 0 1px #fff; box-shadow: inset 0 0 0 10px #fff; }
+.bg-1 h2, .bg-1 blockquote { color: #fff; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+.bg-1 blockquote:before { color: #B1B1B1; }
+
+/* Second Slide */
+.bg-2 .sl-slide-inner, .bg-2 .sl-content-slice { background:#3D21BE url("images/dolphin.jpg") top center repeat;
+	background-size:cover; }
+.bg-2 .deco { border-color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+.bg-2 [data-icon]:after { color: #fff; text-shadow: 0 0 1px #fff; box-shadow: inset 0 0 0 10px #fff; }
+.bg-2 h2, .bg-2 blockquote { color: #fff; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+.bg-2 blockquote:before { color: #B1B1B1; }
+
+/* Third Slide */
+.bg-3 .sl-slide-inner, .bg-3 .sl-content-slice { background:#3D21BE url("images/flower.jpg") top center repeat;
+	background-size:cover; }
+.bg-3 .deco { border-color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+.bg-3 [data-icon]:after { color: #fff; text-shadow: 0 0 1px #fff; box-shadow: inset 0 0 0 10px #fff; }
+.bg-3 h2, .bg-3 blockquote { color: #fff; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+.bg-3 blockquote:before { color: #B1B1B1; }
+
+/* Forth Slide */
+.bg-4 .sl-slide-inner, .bg-4 .sl-content-slice { background:#3D21BE url("images/eye.jpg") top center repeat;
+	background-size:cover; }
+.bg-4 .deco { border-color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+.bg-4 [data-icon]:after { color: #fff; text-shadow: 0 0 1px #fff; box-shadow: inset 0 0 0 10px #fff; }
+.bg-4 h2, .bg-4 blockquote { color: #fff; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+.bg-4 blockquote:before { color: #B1B1B1; }
+
+/* Fifth Slide */
+.bg-5 .sl-slide-inner, .bg-5 .sl-content-slice { background:#3D21BE url("images/window.jpg") top center repeat;
+	background-size:cover; }
+.bg-5 .deco { border-color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+.bg-5 [data-icon]:after { color: #fff; text-shadow: 0 0 1px #fff; box-shadow: inset 0 0 0 10px #fff; }
+.bg-5 h2, .bg-5 blockquote { color: #fff; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+.bg-5 blockquote:before { color: #B1B1B1; }
+
+@media screen and (max-width: 660px) {
+.deco { width: 130px; height: 130px; margin-left: -65px; margin-bottom: 50px; }
+.container[data-icon]:after { width: 110px; height: 110px; line-height: 110px; font-size: 40px; margin: -55px 0 0 -55px; }
+.sl-slide blockquote { margin-bottom: -120px; }
+.sl-slide h2 { line-height: 22px; font-size: 18px; margin-bottom: -40px; letter-spacing: 8px; }
+.sl-slide blockquote p:before { line-height: 10px; width: 40px; height: 40px; font-size: 120px; left: -45px; }
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	
+<div class="header_main">
+	<div id="kiho"><a href="index.html">KIHO'S ROOM</a></div>
+	<div class="header_icons">
+		<a class="fab fa-instagram fa-lg icons" href="https://www.instagram.com" target="blank"></a>
+		<a class="fab fa-twitter fa-lg icons" href="https://twitter.com" target="blank"></a>
+		<a class="fab fa-facebook-f fa-lg icons" href="https://facebook.com" target="blank"></a>
+	</div>
+</div>
+	
+		<div id="menu">
+	<div class="visit">メニュー</div>
+		<a href="port.html">PORTFOLIO</a></li>
+		<a href="skill.html">SKILL</a></li>
+		<a href="works.html">WORKS</a></li>
+		<a href="profi.html">PROFILE</a></li>
+		<a href="cont.html">CONTACT</a></li>
+</div>
+
+
+<div id="footer">Copyright(C)2018 Kiho Nakane, All rights reserved.</div>
+	
+	
+<div class="container">	
+
+<div id="slider" class="sl-slider-wrapper">
+
+<div class="sl-slider">
+
+<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+<div class="sl-slide-inner">
+<div class="deco" data-icon="Portfolio"></div>
+<h2>Welcome to Kiho's room!</h2>
+<blockquote><p>制作したポートフォリオを掲載しております。</p><cite><a href="port.html">詳しくはこちら</a></cite></blockquote>
+</div>
+</div>
+
+<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+<div class="sl-slide-inner">
+<div class="deco" data-icon="Skill"></div>
+<h2>Welcome to Kiho's room!</h2>
+<blockquote><p>コンテンツ・ソフトウェアスキル、</p>
+	<p>資格等などを掲載しております。</p><cite><a href="skill.html">詳しくはこちら</a></cite></blockquote>
+</div>
+</div>
+
+<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+<div class="sl-slide-inner">
+<div class="deco" data-icon="Works"></div>
+<h2>Welcome Kiho's room!</h2>
+<blockquote><p>今まで所属チームの一員として</p>
+	<p>企業と協力して取り組んで</p>
+	<p>来たことを掲載しております。</p><cite><a href="works.html">詳しくはこちら</a></cite></blockquote>
+</div>
+</div>
+
+<div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+<div class="sl-slide-inner">
+<div class="deco" data-icon="Profile"></div>
+<h2>Welcome to Kiho's room!</h2>
+<blockquote><p>自己紹介を掲載しております。</p><cite><a href="profi.html">詳しくはこちら</a></cite></blockquote>
+</div>
+</div>
+
+<div class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+<div class="sl-slide-inner">
+<div class="deco" data-icon="Contact"></div>
+<h2>Welcome to Kiho's room!</h2>
+<blockquote><p>連絡先を掲載しております。</p><cite><a href="cont.html">詳しくはこちら</a></cite></blockquote>
+</div>
+</div>
+</div>
+<!-- /sl-slider -->
+
+<nav id="nav-arrows" class="nav-arrows">
+<span class="nav-arrow-prev">Previous</span>
+<span class="nav-arrow-next">Next</span>
+</nav>
+
+<nav id="nav-dots" class="nav-dots">
+<span class="nav-dot-current"></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</nav>
+	
+	
+
+</div><!-- /slider-wrapper -->
+
+</div>
+	
+
+
+<script src="js/modernizr.custom.79639.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.ba-cond.min.js"></script>
+<script src="js/jquery.slitslider.js"></script>
+
+<script type="text/javascript">	
+$(function() {
+var Page = (function() {
+var $navArrows = $( '#nav-arrows' ),
+$nav = $( '#nav-dots > span' ),
+slitslider = $( '#slider' ).slitslider( {
+speed : 1000, 
+optOpacity : true, 
+autoplay : true, 
+keyboard : true, 
+interval : 4000, 
+onBeforeChange : function( slide, pos ) {
+$nav.removeClass( 'nav-dot-current' );
+$nav.eq( pos ).addClass( 'nav-dot-current' );
+}
+} ),
+init = function() {
+initEvents();
+},
+initEvents = function() {
+// add navigation events
+$navArrows.children( ':last' ).on( 'click', function() {
+slitslider.next();
+return false;
+} );
+$navArrows.children( ':first' ).on( 'click', function() {
+slitslider.previous();
+return false;
+} );
+$nav.each( function( i ) {
+$( this ).on( 'click', function( event ) {
+var $dot = $( this );
+if( !slitslider.isActive() ) {
+$nav.removeClass( 'nav-dot-current' );
+$dot.addClass( 'nav-dot-current' );
+}
+slitslider.jump( i + 1 );
+return false;
+} );
+} );
+};
+return { init : init };
+})();
+Page.init();
+});
+</script>
+
+</div>
+</body>
+</html>
